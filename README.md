@@ -1,11 +1,19 @@
 # Ease_At_Home
 
-This repository now contains a new product blueprint and starter parsing engine for **Kharcha Pani**, an offline-first Android expense tracker.
+## Kharcha Pani (Android)
 
-## Added folder
+A new runnable **Android starter scaffold** has been added under `kharcha-pani/` for the Kharcha Pani expense tracker.
 
-- `kharcha-pani/`
-  - `docs/KHARCHA_PANI_ARCHITECTURE.md` — full architecture and implementation plan.
-  - `app/src/main/java/com/kharchapani/core/model/ParsedTransaction.kt` — parser output model.
-  - `app/src/main/java/com/kharchapani/core/sms/SmsTransactionParser.kt` — SMS parser with support for Federal Bank and SBI samples.
-  - `app/src/test/java/com/kharchapani/core/sms/SmsTransactionParserTest.kt` — unit tests for provided SMS samples and OTP filtering.
+### What's implemented now
+
+- Gradle-based Android project scaffold (`settings.gradle.kts`, root/app `build.gradle.kts`).
+- Jetpack Compose app entry (`MainActivity`) with a Home screen.
+- Room database setup (`KharchaDatabase`, `KharchaDao`, entities).
+- Manual expense entry flow with default category seeding.
+- Transaction listing + “today spend” summary card.
+- SMS parser core (`SmsTransactionParser`) and initial receiver (`BankSmsReceiver`) for `SMS_RECEIVED`.
+- Parser unit tests for provided Federal/SBI sample patterns.
+
+### Notes
+
+This is a Phase-1 baseline and not yet feature-complete against the full product brief.
